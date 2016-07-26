@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+		<script type="text/javascript">
+$(function () {
+    // Create the chart
+    $('#container').highcharts({
+
+        title: {
+            text: 'Highcharts data from Google Spreadsheets'
+        },
+
+        data: {
+            googleSpreadsheetKey: '12cj4AeYKwSOF-AsR76SeD5-Zvpdo0FUj2Jma2vWoxEs',
+            googleSpreadsheetWorksheet: 1
+        },
+          credits: {
+        enabled: false
+        }
+
+    });
+});
+		</script>
+	</head>
+	<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 1500px; margin: 0 auto"></div>
+	</body>
+</html>
