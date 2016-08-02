@@ -11,20 +11,85 @@ ${demo.css}
 		<script type="text/javascript">
 $(function () {
     // Create the chart
-    $('#container').highcharts({
-
-        title: {
-            text: 'Highcharts data from Google Spreadsheets'
+    $('#figure_2').highcharts({
+        chart: {
+        	type: 'bar'
         },
-
+        title: {
+            text: 'Figure..2'
+        },
         data: {
-            googleSpreadsheetKey: '12cj4AeYKwSOF-AsR76SeD5-Zvpdo0FUj2Jma2vWoxEs',
+            googleSpreadsheetKey: '15Ef2LdYQryJ-sk4bBxD9rgwDWhFyjFOcJYzhMUJajHA',
             googleSpreadsheetWorksheet: 1
         },
-          credits: {
-        enabled: false
+        credits: {
+       		enabled: false
         }
-
+    });
+    $('#figure_3').highcharts({
+        chart: {
+        	type: 'area'
+        },
+        title: {
+            text: 'Figure..3'
+        },
+        data: {
+            googleSpreadsheetKey: '15Ef2LdYQryJ-sk4bBxD9rgwDWhFyjFOcJYzhMUJajHA',
+            googleSpreadsheetWorksheet: 2
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal'
+            }
+        },
+        credits: {
+       		enabled: false
+        }
+    });
+    $('#figure_5').highcharts({
+        chart: {
+        	type: 'column'
+        },
+        title: {
+            text: 'Figure..5'
+        },
+        data: {
+            googleSpreadsheetKey: '15Ef2LdYQryJ-sk4bBxD9rgwDWhFyjFOcJYzhMUJajHA',
+            googleSpreadsheetWorksheet: 3
+        },
+        plotOptions: {
+            column: {
+                dataLabels: {
+                    enabled: true,
+                    formatter: function () {
+                        return this.y + '%';
+                    }
+                }
+            }
+        },
+        credits: {
+       		enabled: false
+        }
+    });
+    $('#figure_4').highcharts({
+        chart: {
+        	type: 'bar'
+        },
+        title: {
+            text: 'Figure..4'
+        },
+        data: {
+            googleSpreadsheetKey: '15Ef2LdYQryJ-sk4bBxD9rgwDWhFyjFOcJYzhMUJajHA',
+            googleSpreadsheetWorksheet: 4
+        },
+        plotOptions: {
+           	series: {
+                stacking: 'normal'
+            }
+        },
+        credits: {
+       		enabled: false
+        }
     });
 });
 		</script>
@@ -34,6 +99,9 @@ $(function () {
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 
-<div id="container" style="min-width: 310px; height: 400px; max-width: 1500px; margin: 0 auto"></div>
+<div id="figure_2" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
+<div id="figure_3" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
+<div id="figure_4" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
+<div id="figure_5" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
 	</body>
 </html>
